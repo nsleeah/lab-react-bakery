@@ -1,5 +1,6 @@
 //src/containers/CakeContainer.js
 import {useState} from 'react';
+import Cake from "../components/Cake";
 
 
 const CakeContainer = () => {
@@ -10,11 +11,15 @@ const CakeContainer = () => {
 
     return(
         <>
-            <h2>Activities:</h2>
-            <p>Total Sign-ups: Coming soon!</p>
+            <h2>Cakes: </h2>
+            <Cake title={"Victoria Sponge"} ingredients={"butter, sugar, self-raising flour, baking powder, milk"} price={5} rating={5}/>       
+            <Cake title={"Tea Loaf"} ingredients={"eggs, oil, dried fruit, sugar, self-raising flour, strong tea"} price={2} rating={3}/>      
+            <Cake title={"Carrot Cake"} ingredients={"carrots, walnuts, oil, cream cheese, flour, sugar"} price={8} rating={5}/> 
+            <p>Total Average Ratings: Coming soon!</p>
         </>
     )
 
 }
 
 export default CakeContainer
+
