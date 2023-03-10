@@ -1,11 +1,14 @@
 // src/components/Counter.js
 
-const Cake = ({title, ingredients, price, rating}) => {
+const Cake = ({title, ingredients, price, rating, sellCake}) => {
+    
 
-    //Sell Button
-    //const handleSell = () => {
-        //onButtonClick(count + 1);
-    //}
+    const handleClick = () => {
+        sellCake(price);
+    };
+
+
+
 
     return(
         <>
@@ -14,7 +17,7 @@ const Cake = ({title, ingredients, price, rating}) => {
             <p>Price: £{price} </p>
             <p>Rating: {rating} </p>
             <p>Current total: 0</p>
-            <button>Sell Cake</button>
+            <button onClick={handleClick}>Sell Cake</button>
         </>
     )
 
